@@ -1,0 +1,9 @@
+ruby prove1.rb "([un, d01, d3], ((~ d);(~ p)))"
+ruby prove1.rb "([un, (~ d01), (~ d02), (~ d3)], ((~ d);(~ p))"
+ruby prove1.rb "([un, d01, d1, (~ d11)], (Ob d12))"
+ruby prove1.rb "([un, d01, (~ d14), (~ d15)], (Pm e1))"
+ruby prove1.rb "([un, d02, d3], (Pm e2))"
+ruby prove1.rb "([un, (~ d)], (Pm e2))"
+ruby prove1.rb "([un, d02, d3, t1], (Ob d4))"
+ruby prove1.rb "([un, d02, d3, t1, (~ d4)], (Pm v))"
+
