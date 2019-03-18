@@ -185,6 +185,7 @@ parser = Grammar.build do
 end
 
 #puts parser.run('([(all X: g(X))], g(a))')
+#puts parser.run('([a, b], (Ob c))')
 File.open('problem', 'w') { |file| file.write(parser.run(ARGV[0]).output)}
 time = Benchmark.measure {
   system("./mleancop.sh problem 1")

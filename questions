@@ -6,4 +6,5 @@ ruby prove1.rb "([un, d02, d3], (Pm e2))"
 ruby prove1.rb "([un, (~ d)], (Pm e2))"
 ruby prove1.rb "([un, d02, d3, t1], (Ob d4))"
 ruby prove1.rb "([un, d02, d3, t1, (~ d4)], (Pm v))"
+ruby prove1.rb "([(Id (Ob a)), (NO (~ a) b), (NO (~ b), c), (~ a), (~ b)], (Ob c))"
 
