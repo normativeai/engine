@@ -1,5 +1,6 @@
 require 'bundler/inline'
 require 'benchmark'
+require 'securerandom'
 gemfile do
       source 'https://rubygems.org'
       gem 'parser_combinator_dsl'
@@ -186,8 +187,10 @@ end
 
 #puts parser.run('([(all X: g(X))], g(a))')
 #puts parser.run('([a, b], (Ob c))')
-File.open('problem', 'w') { |file| file.write(parser.run(ARGV[0]).output)}
+fname = "problem_#{SecureRandom.urlsafe_base64}"
+File.open(fname, 'w') { |file| file.write(parser.run(ARGV[0]).output)}
 time = Benchmark.measure {
-  system("./mleancop.sh problem 1")
+  system("./mleancop.sh #{fname} 1")
 }
+system("rm #{fname}")
 STDERR.puts "Took #{time.real} seconds"

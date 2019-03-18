@@ -43,7 +43,7 @@ PROLOG_OPTIONS='-e'
 # print proof [yes|no]
 PRINT_PROOF=yes
 # save proof [yes|no]
-SAVE_PROOF=yes
+SAVE_PROOF=no
 
 # set TPTP library path
 # TPTP=.
